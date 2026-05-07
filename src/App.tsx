@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { supabase } from "./lib/supabase"
+import DiabetesHome from "./components/diabetes/DiabetesHome";
 
 export default function App() {
   const [screen, setScreen] = useState("home")
