@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { supabase } from "./lib/supabase"
-import DiabetesHome from "./components/diabetes/DiabetesHome";
+import DiabetesHome from "./components/diabetes/DiabetesHome"
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function App() {
   const [screen, setScreen] = useState("home")
@@ -59,7 +60,7 @@ export default function App() {
         body: JSON.stringify({
           contents: [{
             parts: [{
-              text:text: `You are Aarogya AI, 
+              text: `You are Aarogya AI, 
 a knowledgeable and warm Indian 
 healthcare assistant. 
 
@@ -285,6 +286,7 @@ Never be vague or generic.`
           Skip for now
         </button>
       </div>
+      <SpeedInsights />
     </div>
   )
 
@@ -888,6 +890,7 @@ Tell me anything..."
         ))}
       </div>
 
+      <SpeedInsights />
     </div>
   )
 }
